@@ -1,0 +1,9 @@
+修改时间：				sudo date -s "2021-1-9 16:15:30" （修改为当前的日期和时间）
+启动底盘控制器节点：	roslaunch huanyu_robot_start Huanyu_robot_start.launch
+启动gmapping建图节点：	roslaunch huanyu_robot_start gmapping_slam.launch
+移动机器人程序：		arbotix_gui
+保存地图：				cd robot_ws/src/huanyu_robot_start/map
+						rm map.*
+						rosrun map_server map_saver -f map
+DWA导航：				roslaunch huanyu_robot_start navigation_slam.launch
+话题订阅关系：			rqt_graph
